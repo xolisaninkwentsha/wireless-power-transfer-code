@@ -24,7 +24,7 @@ int main(void)
 	/* Infinite loop */
 	while (1)
 	{
-    \\ ADC used to change the duty cycle.
+                // ADC used to change the duty cycle.
 		TIM2->CCR3 =  (((ADC1-> DR)*0.1)).80; // PB10
 		TIM2->CCR4 =  (((ADC1-> DR)*0.1)).80; // PB11
 		}
@@ -64,10 +64,10 @@ int main(void)
 
 	void init_adc()
 	{
-		RCC->APB2ENR |= RCC_APB2ENR_ADCEN;
-		ADC1->CFGR1 |= ADC_CFGR1_CONT;
-		ADC1->CFGR1 |= ADC_CFGR1_RES_0; 	// 10 BIT
-		ADC1->CHSELR |= ADC_CHSELR_CHSEL5;
+		RCC->APB2ENR |= RCC_APB2ENR_ADCEN; // clock enable ADC
+		ADC1->CFGR1 |= ADC_CFGR1_CONT;	// continuos mode
+		ADC1->CFGR1 |= ADC_CFGR1_RES_0;	// 10 bit resolution
+		ADC1->CHSELR |= ADC_CHSELR_CHSEL5; // select channel 5 for pot in PA5.
 		ADC1->CR |=ADC_CR_ADEN;
 		while ((ADC1->ISR &= 1<<0)==0){}
 		ADC1->CR |= ADC_CR_ADSTART;
