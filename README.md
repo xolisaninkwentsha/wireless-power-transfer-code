@@ -1,5 +1,5 @@
 # Wireless Power Transfer Code
-Author: Xolisani Nkwentsha, NKWXOL003 <br />
+Author: Xolisani Nkwentsha <br />
 Topic: Wireless Power Transfer System to charge an Electric bike. <br />
 Supervisor: Prof MA Khan <br /> 
 <br />
